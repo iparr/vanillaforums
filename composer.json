@@ -1,5 +1,5 @@
 {
-    "name": "ian/vanillaforums",
+    "name": "iparr/vanillaforums",
     "description": "Single Sign On plugin for VanillaForums/jsConnect and CraftCMS",
     "type": "craft-plugin",
     "repositories": [
@@ -21,6 +21,7 @@
         }
     ],
     "require": {
+        "composer/installers": "~1.0",
         "vanilla/jsConnectPHP": "1.*"
     },
     "authors": [
