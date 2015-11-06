@@ -1,7 +1,7 @@
 <?php
 namespace Craft;
 
-require_once(dirname(__FILE__).'/../library/jsConnectPHP/functions.jsconnect.php');
+require CRAFT_PLUGINS_PATH.'/vanillaforums/vendor/autoload.php';
 
 class Vanillaforums_UtilsService extends BaseApplicationComponent
 {
@@ -15,7 +15,7 @@ class Vanillaforums_UtilsService extends BaseApplicationComponent
 		$result = "";
 		$settings = craft()->plugins->getPlugin('vanillaforums')->getSettings();
 		$data = array();
-		
+
 		$currentUser = craft()->userSession->user;
 		if ($currentUser)
 		{
@@ -25,20 +25,20 @@ class Vanillaforums_UtilsService extends BaseApplicationComponent
 			if ($currentUser->getPhotoUrl())
 				$data['photourl'] = $currentUser->getPhotoUrl();
 		}
-		
+
 		$vanillaforumsClientID = $settings['vanillaforumsClientID'];
 		$vanillaforumsSecret = $settings['vanillaforumsSecret'];
 
 		$secure = true;
-		
+
 		//ob_start(); // Start output buffering
-		
+
 		\WriteJsConnect($data, $_GET, $vanillaforumsClientID, $vanillaforumsSecret, $secure);
 
 		//$result = ob_get_contents(); // Store buffer in variable
-		
+
 		//ob_end_clean();
-		
+
 		return $result;
     } /* -- outputSSO */
 
@@ -51,7 +51,7 @@ class Vanillaforums_UtilsService extends BaseApplicationComponent
 		$result = "";
 		$settings = craft()->plugins->getPlugin('vanillaforums')->getSettings();
 		$data = array();
-		
+
 		$currentUser = craft()->userSession->user;
 		if ($currentUser)
 		{
@@ -61,14 +61,14 @@ class Vanillaforums_UtilsService extends BaseApplicationComponent
 			if ($currentUser->getPhotoUrl())
 				$data['photourl'] = $currentUser->getPhotoUrl();
 		}
-		
+
 		$vanillaforumsClientID = $settings['vanillaforumsClientID'];
 		$vanillaforumsSecret = $settings['vanillaforumsSecret'];
 
 		$secure = true;
-				
+
 		$result = \JsSSOString($data, $vanillaforumsClientID, $vanillaforumsSecret);
-		
+
 		return $result;
     } /* -- outputSSOEmbed */
 

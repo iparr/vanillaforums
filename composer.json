@@ -1,0 +1,37 @@
+{
+    "name": "ian/vanillaforums",
+    "description": "Single Sign On plugin for VanillaForums/jsConnect and CraftCMS",
+    "type": "craft-plugin",
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "vanilla/jsConnectPHP",
+                "version": "1.0",
+                "dist": {
+                    "url": "https://github.com/vanilla/jsConnectPHP/archive/master.zip",
+                    "type": "zip"
+                },
+                "source": {
+                    "url": "git@github.com:vanilla/jsConnectPHP.git",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
+        }
+    ],
+    "require": {
+        "vanilla/jsConnectPHP": "1.*"
+    },
+    "authors": [
+        {
+            "name": "Megalomaniac",
+            "homepage": "https://github.com/khalwat/"
+        },
+        {
+            "name": "Ian Parr",
+            "email": "ian@devolute.net",
+            "homepage": "http://devolute.net"
+        }
+    ]
+}

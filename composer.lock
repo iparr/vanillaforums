@@ -1,0 +1,35 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "4dcdedac700e6943f79b12a8e9f04095",
+    "content-hash": "9a6657235b1c10737f456d4d9f741e1d",
+    "packages": [
+        {
+            "name": "vanilla/jsConnectPHP",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:vanilla/jsConnectPHP.git",
+                "reference": "origin/master"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/vanilla/jsConnectPHP/archive/master.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "library"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
